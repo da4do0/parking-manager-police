@@ -1,25 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import './segnalazioni.css';
+import "./segnalazioni.css";
 import Header from "../header/header";
 
 const Segnalazioni = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [reports, setReports] = useState([
     {
       id: 2548635,
-      status: 'APERTO',
-      description: 'Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...',
+      status: "APERTO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...",
       agent: 2548635,
-      sanction: 'IN CORSO...',
+      sanction: "IN CORSO...",
       amount: null,
     },
     {
       id: 3548495,
-      status: 'CHIUSO',
-      description: 'Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...',
+      status: "CHIUSO",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...",
       agent: 2548635,
-      sanction: '€150',
+      sanction: "€150",
       amount: 150,
     },
   ]);
@@ -28,17 +30,17 @@ const Segnalazioni = () => {
     setSearchTerm(e.target.value);
   };
 
-  const filteredReports = reports.filter(report =>
+  const filteredReports = reports.filter((report) =>
     report.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="container">
-      <aside className="filtri">
+      <div className="filtri">
         <h2>Filtri</h2>
         <div className="filter-options">
-            <label>Stato</label>
-          <div className='toggleAperte'>
+          <label>Stato</label>
+          <div className="toggleAperte">
             <button>Aperte</button>
             <button>Chiuse</button>
           </div>
@@ -49,16 +51,17 @@ const Segnalazioni = () => {
           <input type="date" />
           <input type="date" />
         </div>
-      </aside>
+      </div>
+      ;
       <div>
         <div className="filtroCerca">
-            <input
+          <input
             type="text"
             placeholder="Search"
             value={searchTerm}
             onChange={handleSearchChange}
-            />
-            <div className="parking-info">
+          />
+          <div className="parking-info">
             <p>Informazioni parcheggio:</p>
             <div>Totali: 50</div>
             <div>Occupati: 23</div>
@@ -67,27 +70,27 @@ const Segnalazioni = () => {
             <div>Attivi: 12</div>
             <div>Scaduto: 10</div>
             <div>Altri: 12</div>
-            </div>
+          </div>
         </div>
         <div className="report-list">
-            {filteredReports.map(report => (
+          {filteredReports.map((report) => (
             <div key={report.id} className="report-card">
-                <div className="report-id">ID {report.id}</div>
-                <div className={`report-status ${report.status.toLowerCase()}`}>{report.status}</div>
-                <div className="report-description">{report.description}</div>
-                <div className="report-agent">AGENTE {report.agent}</div>
-                <div className="report-sanction">
+              <div className="report-id">ID {report.id}</div>
+              <div className={`report-status ${report.status.toLowerCase()}`}>
+                {report.status}
+              </div>
+              <div className="report-description">{report.description}</div>
+              <div className="report-agent">AGENTE {report.agent}</div>
+              <div className="report-sanction">
                 SANZIONE {report.sanction || `${report.amount}€`}
-                </div>
+              </div>
             </div>
-            ))}
+          ))}
         </div>
       </div>
-      <div className="asideDestro">
-      </div>
+      <div className="asideDestro"></div>
     </div>
   );
 };
 
 export default Segnalazioni;
-
