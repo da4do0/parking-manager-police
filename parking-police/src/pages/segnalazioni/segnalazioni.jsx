@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
 import './segnalazioni.css';
@@ -39,7 +38,7 @@ const Segnalazioni = () => {
         <h2>Filtri</h2>
         <div className="filter-options">
             <label>Stato</label>
-          <div className='aperteChiuse'>
+          <div className='toggleAperte'>
             <button>Aperte</button>
             <button>Chiuse</button>
           </div>

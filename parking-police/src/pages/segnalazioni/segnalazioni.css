@@ -1,52 +1,10 @@
 .container {
-    background-color: #EBEBEB;
-    padding: 5%;
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  nav ul li a.active {
-    color: red;
-  }
-  
-  .filtroCerca {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .filtri {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: min-content;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .filter-options {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
+  background-color: #ebebeb;
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
 
   .aperteChiuse {
     display: flex;
@@ -71,9 +29,73 @@
   .report-status.chiuso {
     color: grey;
   }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
 
-  .asideDestro {
-    padding: 20px;
-    margin-bottom: 10px;
-  }
-  
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a.active {
+  color: red;
+}
+
+.filtroCerca {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filtri {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: min-content;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.toggleAperte {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.report-list {
+  margin-top: 20px;
+}
+
+.report-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.report-status.aperto {
+  color: green;
+}
+
+.report-status.chiuso {
+  color: grey;
+}
+
+.asideDestro {
+  padding: 20px;
+  margin-bottom: 10px;
+}
