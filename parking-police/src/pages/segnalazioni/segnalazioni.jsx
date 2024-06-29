@@ -1,14 +1,3 @@
-/* import React from "react";
-
-const Segnalazioni = ()=>{
-    return(
-        <>
-        ciao
-        </>
-    )
-}
-
-export default Segnalazioni; */
 
 import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
@@ -82,17 +71,7 @@ const Segnalazioni = () => {
             </div>
         </div>
         <div className="report-list">
-            {filteredReports.map(report => (
-            <div key={report.id} className="report-card">
-                <div className="report-id">ID {report.id}</div>
-                <div className={`report-status ${report.status.toLowerCase()}`}>{report.status}</div>
-                <div className="report-description">{report.description}</div>
-                <div className="report-agent">AGENTE {report.agent}</div>
-                <div className="report-sanction">
-                SANZIONE {report.sanction || `${report.amount}€`}
-                </div>
-            </div>
-            ))}
+            
         </div>
       </div>
       <div className="asideDestro">

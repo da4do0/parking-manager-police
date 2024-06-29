@@ -1,7 +1,3 @@
-* {
-  border: solid 1px red;
-}
-
 .container {
     background-color: #EBEBEB;
     padding: 5%;
@@ -55,8 +51,7 @@
   .aperteChiuse {
     display: flex;
     flex-direction: row;
-    padding
-    gap: 10px
+    gap: 10px;
   }
   
   .report-list {
