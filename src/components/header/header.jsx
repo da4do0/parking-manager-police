@@ -9,7 +9,7 @@ const Header = ()=>{
                 <nav>
                     <ul>
                         <Link to="/segnalazioni"><li>Segnalazioni</li></Link>
-                        <Link to="/"><li>Zona</li></Link>
+                        {/* <Link to="/"><li>Zona</li></Link> */}
                         <Link to="/"><li>Parcheggi</li></Link>
                     </ul>
                 </nav>

@@ -5,7 +5,7 @@ const CardSegnalazione = ({ Segnalazioni }) => {
   return (
     <div className="container__segnalazioni">
       {Segnalazioni.map(
-        ({ id, status, description, agent, sanction }) => 
+        ({ id, status, description, agent, amount }) => 
           <div className="segnalazione">
             <div className="segnalazione__header">
               <div className="segnalazione__id">
@@ -31,7 +31,7 @@ const CardSegnalazione = ({ Segnalazioni }) => {
               </div>
               <div className="segnalazione__sanzione">
                 <span>SANZIONE</span>
-                {sanction || "IN CORSO..."}
+                {amount || "IN CORSO..."}
               </div>
             </div>
           </div>

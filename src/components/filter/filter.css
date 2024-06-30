@@ -1,4 +1,59 @@
 aside{
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter{
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.filter > span{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.status > span, .multa>span, .data-ora>span{
+    font-size: 20px;
+    color: #909090;
+}
+
+.status, .multa, .data-ora{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.status-button__container, .multa-button__container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.status-button__container button{
+    border: none;
+    background-color: #EBEBEB;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.multa__max, .multa__min{
+    border: 1px solid red;
     width: 25%;
+}
+
+.multa__min >input, .multa__max> input{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.svg__euro{
+    position: absolute;
 }

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -8,20 +8,24 @@ import Segnalazioni from "./pages/segnalazioni/segnalazioni";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Header/>,
-    children:[
-      {index: true,
-        element: <Segnalazioni/>
-      },
+    element: <Header />,
+    children: [
+      { index: true, element: <Segnalazioni /> },
       {
         path: "/segnalazioni",
-        element: <Segnalazioni/>
-      }
-    ]
+        element: <Segnalazioni />,
+      },/* 
+      {
+        path: "/zona",
+        element: <Zona />,
+      }, */
+      {
+        path: "/segnalazioni",
+        element: <Segnalazioni />,
+      },
+    ],
   },
 ]);
-
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -14,7 +14,6 @@ const Segnalazioni = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...",
       agent: 2548635,
-      sanction: "IN CORSO...",
       amount: null,
     },
     {
@@ -23,7 +22,6 @@ const Segnalazioni = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...",
       agent: 2548635,
-      sanction: "€150",
       amount: 150,
     },
   ]);
@@ -32,21 +30,22 @@ const Segnalazioni = () => {
 
   return (
     <>
-      
       <main>
-        <SearchBar onInput={setsearchValue} />
-        <InfoBar
-          testoInfo="Informazioni segnalazioni"
-          nomeGreen="Aperte"
-          valoreGreen="12"
-          nomeGrey="Chiuse"
-          valoreGrey="12"
-        />
-        <CardSegnalazione Segnalazioni={reports} />
+        <aside>
+          <Filter />
+        </aside>
+        <section>
+          <SearchBar onInput={setsearchValue} />
+          <InfoBar
+            testoInfo="Informazioni segnalazioni"
+            nomeGreen="Aperte"
+            valoreGreen="12"
+            nomeGrey="Chiuse"
+            valoreGrey="12"
+          />
+          <CardSegnalazione Segnalazioni={reports} />
+        </section>
       </main>
-      <aside>
-        <Filter />
-      </aside>
     </>
   );
 };

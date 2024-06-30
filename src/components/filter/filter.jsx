@@ -7,26 +7,30 @@ const Filter = ({}) => {
       <span>Filtri</span>
       <div className="status">
         <span>Stato</span>
+        <div className="status-button__container">
         <button>
           <span>Aperte</span>
         </button>
         <button>
           <span>Chiuse</span>
         </button>
+        </div>
       </div>
       <div className="multa">
         <span>Multa</span>
-        <div className="multa__min">
-          <div className="svg__euro">
-            <span>€</span>
+        <div className="multa-button__container">
+          <div className="multa__min">
+            <div className="svg__euro">
+              <span>€</span>
+            </div>
+            <input type="text" name="multaMin" id="multaMin" />
           </div>
-          <input type="text" name="multaMin" id="multaMin" />
-        </div>
-        <div className="multa__max">
-          <div className="svg__euro">
-            <span>€</span>
+          <div className="multa__max">
+            <div className="svg__euro">
+              <span>€</span>
+            </div>
+            <input type="text" name="multaMax" id="multaMax" />
           </div>
-          <input type="text" name="multaMax" id="multaMax" />
         </div>
       </div>
       <div className="data-ora">
