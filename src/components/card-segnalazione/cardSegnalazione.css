@@ -15,6 +15,7 @@
   justify-content: space-between;
   gap: 32px;
   background-color: #ffffff;
+  cursor: pointer; /* per mettere la funzione dell'inserimento della sanzione */
 }
 
 .segnalazione__header{

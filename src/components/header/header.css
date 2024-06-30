@@ -5,7 +5,6 @@ header {
   justify-content: space-around;
 }
 
-
 header ul {
   display: flex;
   gap: 20px;
