@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/parking-manager-police/static/css/main.6d86037b.css",
+    "main.js": "/parking-manager-police/static/js/main.4b021151.js",
+    "index.html": "/parking-manager-police/index.html",
+    "main.6d86037b.css.map": "/parking-manager-police/static/css/main.6d86037b.css.map",
+    "main.4b021151.js.map": "/parking-manager-police/static/js/main.4b021151.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d86037b.css",
+    "static/js/main.4b021151.js"
+  ]
+}
