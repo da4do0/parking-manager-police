@@ -23,7 +23,7 @@ const InfoBar = ({
               : "values__green"
           }`}
         >
-          <span>{`${nomeGreen} ${valoreGreen}`}</span>
+          <span>{`${nomeGreen}: ${valoreGreen}`}</span>
         </div>
         <div
           className={`${
@@ -32,7 +32,7 @@ const InfoBar = ({
               : "values__red"
           }`}
         >
-          <span>{`${nomeRed} ${valoreRed}`}</span>
+          <span>{`${nomeRed}: ${valoreRed}`}</span>
         </div>
         <div
           className={`${
@@ -41,7 +41,7 @@ const InfoBar = ({
               : "values__grey"
           }`}
         >
-          <span>{`${nomeGrey} ${valoreGrey}`}</span>
+          <span>{`${nomeGrey}: ${valoreGrey}`}</span>
         </div>
       </div>
     </div>

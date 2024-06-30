@@ -21,6 +21,7 @@
 
 }
 
+
 .segnalazione__header,
 .segnalazione__footer {
   display: flex;
@@ -39,11 +40,14 @@
 }
 
 .segnalazione__stato{
-    border-radius: 20px;
-    background-color: #31D237;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: 600;
+  border-radius: 20px;
+  background-color: #31D237;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  height: max-content;
+  padding: 5px 15px 5px 15px;
 }
 
 .segnalazione__id,
@@ -53,4 +57,15 @@
   flex-direction: column;
   font-weight: 600;
   font-size: 20px;
+}
+
+.segnalazione__id {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.segnalazione__sanzione {
+  text-align: right;
 }

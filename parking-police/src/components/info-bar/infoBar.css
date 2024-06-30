@@ -1,38 +1,36 @@
 .container__status {
-    padding-top: 10px;
+  padding-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.container__values{
-    display: flex;
-    gap: 15px;
+.container__values {
+  display: flex;
+  gap: 15px;
 }
 
-.container__values div{
-    padding: 5px 10px;
-    border-radius: 30px;
-    display: inline-block;
+.container__values div {
+  padding: 5px 10px 5px 10px;
+  border-radius: 30px;
+  display: inline-block;
 }
 
-.values__green{
-    background-color: #31D237;
-    color: #FFFFFF;
+.values__green {
+  background-color: #31d237;
+  color: #ffffff;
 }
 
-.values__red{
-    background-color: #E63946;
-    color: #FFFFFF;
-    
+.values__red {
+  background-color: #e63946;
+  color: #ffffff;
 }
 
-.values__grey{
-    background-color: #FFFFFF;
-
+.values__grey {
+  background-color: #ffffff;
 }
 
 div.none {
-    display: none;
-  }
+  display: none;
+}
