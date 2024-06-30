@@ -1,0 +1,38 @@
+.container__status {
+    padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container__values{
+    display: flex;
+    gap: 15px;
+}
+
+.container__values div{
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.values__green{
+    background-color: #31D237;
+    color: #FFFFFF;
+}
+
+.values__red{
+    background-color: #E63946;
+    color: #FFFFFF;
+    
+}
+
+.values__grey{
+    background-color: #FFFFFF;
+
+}
+
+div.none {
+    display: none;
+  }
