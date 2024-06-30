@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./pages/header/header";
+import Header from "./components/header/header";
 import Segnalazioni from "./pages/segnalazioni/segnalazioni";
 
 const router = createBrowserRouter([

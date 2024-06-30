@@ -3,6 +3,7 @@ import "./segnalazioni.css";
 import SearchBar from "../../components/seach-bar/searchBar";
 import InfoBar from "../../components/info-bar/infoBar";
 import CardSegnalazione from "../../components/card-segnalazione/cardSegnalazione";
+import Filter from "../../components/filter/filter";
 
 const Segnalazioni = () => {
   const [searchValue, setsearchValue] = useState("");
@@ -29,52 +30,9 @@ const Segnalazioni = () => {
 
   useEffect(() => {}, []);
 
-  {
-    /* <div className="container">
-    <div className="filtri">
-      <h2>Filtri</h2>
-      <div className="filter-options">
-        <label>Stato</label>
-        <div className="toggleAperte">
-          <button>Aperte</button>
-          <button>Chiuse</button>
-        </div>
-        <label>Multa</label>
-        <input type="text" value="123€" readOnly />
-        <input type="text" placeholder="...€" />
-        <label>Data e ora</label>
-        <input type="date" />
-        <input type="date" />
-      </div>
-    </div>
-    <div>
-      <div className="filtroCerca">
-        <input
-          type="text"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-        <div className="parking-info">
-          <p>Informazioni parcheggio:</p>
-          <div>Totali: 50</div>
-          <div>Occupati: 23</div>
-          <div>Liberi: 27</div>
-          <p>Informazioni pagamenti:</p>
-          <div>Attivi: 12</div>
-          <div>Scaduto: 10</div>
-          <div>Altri: 12</div>
-        </div>
-      </div>
-      <div className="report-list">
-          
-      </div>
-    </div>
-    <div className="asideDestro"></div>
-  </div> */
-  }
   return (
     <>
+      
       <main>
         <SearchBar onInput={setsearchValue} />
         <InfoBar
@@ -86,6 +44,9 @@ const Segnalazioni = () => {
         />
         <CardSegnalazione Segnalazioni={reports} />
       </main>
+      <aside>
+        <Filter />
+      </aside>
     </>
   );
 };
