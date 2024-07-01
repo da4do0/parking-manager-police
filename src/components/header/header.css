@@ -43,3 +43,10 @@ nav ul li:hover {
 .logo__container__pula img {
   cursor: pointer;
 }
+
+.logo__container__pula img:hover {
+  border-radius: 100%;
+  cursor: pointer;
+  filter: brightness(93%);
+  transition: 0.5s;
+}

@@ -1,7 +1,7 @@
 aside{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .filter{
@@ -43,8 +43,15 @@ aside{
     padding: 5px 10px;
     border-radius: 15px;
     cursor: pointer;
+    opacity: 80%;
+    transition: color 0.5s;
 }
 
+.status-button__container button:hover{
+    background-color: #dcdada;
+    opacity: 80%;
+    transition: 0.3s;
+}
 
 .multa__max, .multa__min{
     position: relative;

@@ -4,9 +4,16 @@ import logoPula from "../../assets/logo.png";
 import userPula from "../../assets/Profilo-icon.png";
 import "./header.css";
 
-const linkStyle = ({ isActive }) => {
+/* const linkStyle = ({ isActive }) => {
     return { color: isActive ? 'red' : '' };
-  };
+  }; */
+
+ /*  const DropdownMenu = () => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const handleToggle = () => {
+      setIsOpen(!isOpen);
+    }; */
 
 const Header = () => {
   return (
