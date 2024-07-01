@@ -1,9 +1,12 @@
 .container__segnalazioni{
-    padding-top: 15px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: flex-start
+    justify-content: flex-start;
+    overflow: scroll;
+    height: 400px;
+    scrollbar-width: none;
 }
 
 .segnalazione {
@@ -15,13 +18,15 @@
   justify-content: space-between;
   gap: 32px;
   background-color: #ffffff;
-  cursor: pointer; /* per mettere la funzione dell'inserimento della sanzione */
+  cursor: pointer;
 }
 
-.segnalazione__header{
-
+.segnalazione:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  filter: brightness(95%);
+  transition: 0.3s;
 }
-
 
 .segnalazione__header,
 .segnalazione__footer {
@@ -31,7 +36,8 @@
 
 .segnalazione__id > span,
 .segnalazione__agente > span,
-.segnalazione__sanzione > span {
+.segnalazione__sanzione > span,
+.segnalazione__zona > span {
   font-weight: normal;
   color: #909090;
 }
@@ -53,7 +59,8 @@
 
 .segnalazione__id,
 .segnalazione__agente,
-.segnalazione__sanzione{
+.segnalazione__sanzione,
+.segnalazione__zona{
   display: flex;
   flex-direction: column;
   font-weight: 600;

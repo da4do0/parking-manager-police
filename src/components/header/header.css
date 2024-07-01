@@ -3,15 +3,50 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  max-height: 80px;
 }
 
 header ul {
   display: flex;
+  align-items: center;
   gap: 20px;
   padding: 0;
 }
 
+ul *{
+  text-decoration: none;
+}
+
 header li {
   list-style-type: none;
+  color: black;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+
+nav ul li {
   text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+nav ul li:hover {
+  color: #A8DADC;
+}
+
+.logo__container__pula img {
+  cursor: pointer;
+}
+
+.logo__container__pula img:hover {
+  border-radius: 100%;
+  cursor: pointer;
+  filter: brightness(93%);
+  transition: 0.5s;
 }
