@@ -8,24 +8,12 @@ import { createClient } from "@supabase/supabase-js";
 
 const Segnalazioni = () => {
   const [searchValue, setsearchValue] = useState("");
-  const [reports, setReports] = useState([
-    {
-      id: 2548635,
-      status: "APERTO",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...",
-      agent: 2548635,
-      amount: null,
-    },
-    {
-      id: 3548495,
-      status: "CHIUSO",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Vel quis tempus convallis pulvinar quis montes. Nunc integer lorem lacus nullam sit aliquam faucibus. Imperdiet cursus blandit enim vesti...",
-      agent: 2548635,
-      amount: 150,
-    },
-  ]);
+  const [reports, setReports] = useState([]);
+  const [multaMin, multaMin_set] = useState();
+  const [multaMax, multaMax_set] = useState();
+  const [stato, stato_set] = useState();
+  const [dataInizio, dataInizio_set] = useState();
+  const [dataFine, dataFine_set] = useState();
 
   const supabaseUrl = "https://yuyyujadubndgfpxauug.supabase.co";
   const supabaseKey =
@@ -45,12 +33,12 @@ const Segnalazioni = () => {
     console.log(data);
     console.log(error);
   };
-
+  
   return (
     <>
       <main>
         <aside>
-          <Filter />
+          <Filter stato={stato_set} multaMin={multaMin_set} multaMax={multaMax_set}  dataInizio={dataInizio_set} dataFine={dataFine_set}/>
         </aside>
         <section>
           <SearchBar onInput={setsearchValue} />

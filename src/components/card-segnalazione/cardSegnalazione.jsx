@@ -1,9 +1,11 @@
 import React from "react";
+import { FixedSizeList as List } from 'react-window';
 import "./cardSegnalazione.css";
 
 const CardSegnalazione = ({ Segnalazioni }) => {
   return (
     <div className="container__segnalazioni">
+      
       {Segnalazioni.map(
         ({ id, stato, descrizione, id_agente
           , amount, id_area_parcheggio}) => 
