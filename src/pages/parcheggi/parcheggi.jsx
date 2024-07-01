@@ -7,30 +7,23 @@ import CardTicket from "../../components/card-status-ticket/cardTicket";
 
 const Parcheggi = () => {
   const [searchValue, setsearchValue] = useState("");
-  const [arrayTickets, arrayTickets_set] = useState(
-    [
-    {
-        "targa": "AB123CD",
-        "stato": "attivo",
-    },
-    {
-        "targa": "EF456GH",
-        "stato": "scaduto",
-    },
-    {
-        "targa": "IJ789KL",
-        "stato": "attivo",
-    },
-    {
-        "targa": "MN012OP",
-        "stato": "scaduto"
-    }
-]);
+  const [arrayTickets, arrayTickets_set] = useState([]);
+  const [stato, stato_set] = useState();
+  const [dataInizio, dataInizio_set] = useState();
+  const [dataFine, dataFine_set] = useState();
+
+  const queryMod = () =>{
+    
+  }
+
   return (
     <>
       <main>
         <aside>
-          <Filter />
+          <Filter 
+            stato={stato_set}
+            dataInizio={dataInizio_set}
+            dataFine={dataFine_set}/>
         </aside>
         <section>
           <SearchBar onInput={setsearchValue} />
@@ -41,7 +34,7 @@ const Parcheggi = () => {
             nomeRed="Scadute"
             valoreRed="10"
             nomeGrey="Chiuse"
-            valoreGrey="12"
+            valoreGrey="14"
           />
           <CardTicket statusTickets={arrayTickets}/>
         </section>

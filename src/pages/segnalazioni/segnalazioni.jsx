@@ -20,25 +20,33 @@ const Segnalazioni = () => {
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1eXl1amFkdWJuZGdmcHhhdXVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTc2NjA4MzUsImV4cCI6MjAzMzIzNjgzNX0.V8bBPKuA3fXB10LcA1inEJRDAv96y-ePQaNdpaKO0yo";
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  useEffect(() => {searchAllData()}, [searchValue]);
+  useEffect(() => {
+    searchAllData();
+  }, [searchValue]);
 
   const searchAllData = async () => {
-    console.log("first")
+    console.log("first");
     let { data, error } = await supabase
       .from("segnalazione_vigilanza")
       .select("*");
-    if(data.length > 0){
+    if (data.length > 0) {
       setReports(data);
     }
     console.log(data);
     console.log(error);
   };
-  
+
   return (
     <>
       <main>
         <aside>
-          <Filter stato={stato_set} multaMin={multaMin_set} multaMax={multaMax_set}  dataInizio={dataInizio_set} dataFine={dataFine_set}/>
+          <Filter
+            stato={stato_set}
+            multaMin={multaMin_set}
+            multaMax={multaMax_set}
+            dataInizio={dataInizio_set}
+            dataFine={dataFine_set}
+          />
         </aside>
         <section>
           <SearchBar onInput={setsearchValue} />

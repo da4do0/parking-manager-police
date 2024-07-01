@@ -32,8 +32,8 @@ const Header = () => {
           <div className="logo__container__pula" onClick={handleToggle}>
             <img src={userPula} alt="User Icon" />
             {isOpen && (
-              <div className="dropdown-menu">
-                <button className="dropdown-item" onClick={() => alert('Esci')}>
+              <div className="dropdown-menu__header">
+                <button className="dropdown-item__header" onClick={() => alert('Esci')}>
                   Esci
                 </button>
               </div>

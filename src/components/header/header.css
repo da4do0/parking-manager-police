@@ -65,7 +65,7 @@ nav ul li:hover {
 }
 
 /* Stili per il menu a tendina */
-.dropdown-menu {
+.dropdown-menu__header {
   position: absolute;
   border-radius: 10px;
   top: 100%;
@@ -80,21 +80,24 @@ nav ul li:hover {
   width: 100%;
 }
 
-.dropdown-item {
+.dropdown-item__header {
+  display: flex;
+  justify-content: center;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   background: none;
   border: none;
   width: 100%;
 }
 
-.dropdown-item:hover {
-  background-color: #630010; /* non funziona sto cazzo di hover */
+.dropdown-item__header:hover {
+  border-radius: 10px;
+  background-color: #630010;
+  transition: 0.3s;
 }
 
-/* Animazioni */
 @keyframes dropdown {
   to {
     opacity: 1;

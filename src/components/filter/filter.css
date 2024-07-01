@@ -12,6 +12,15 @@ aside{
     background-color: #FFFFFF;
     width: 90%;
     border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter button{
+    padding: 10px 10px;
+    border: none;
+    background-color: #A8DADC;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .filter > span{
@@ -78,10 +87,12 @@ aside{
     grid-template-columns: repeat(3, auto);
     align-items: center;
     gap: 10px;
+    justify-content: start;
 }
 
 .data-ora__input > input{
     background-color: #EBEBEB;
     border: none;
     padding: 5px 10px ;
+    border-radius: 5px;
 }

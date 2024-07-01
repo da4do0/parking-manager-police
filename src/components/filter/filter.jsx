@@ -43,7 +43,7 @@ const Filter = ({ multaMin, multaMax, stato, dataInizio, dataFine }) => {
         ""
       )}
 
-      {dataFine || dataInizio ? (
+      {(dataFine && dataInizio) ? (
         <div className="data-ora">
           <span>Data e ora</span>
           <div className="data-ora__input">
@@ -55,6 +55,7 @@ const Filter = ({ multaMin, multaMax, stato, dataInizio, dataFine }) => {
       ) : (
         ""
       )}
+      <button>Applica</button>
     </div>
   );
 };
