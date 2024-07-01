@@ -18,11 +18,6 @@
   cursor: pointer; /* per mettere la funzione dell'inserimento della sanzione */
 }
 
-.segnalazione__header{
-
-}
-
-
 .segnalazione__header,
 .segnalazione__footer {
   display: flex;

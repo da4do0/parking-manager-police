@@ -1,0 +1,51 @@
+.container__cardTicket {
+    padding-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.targa {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.targa > span {
+  font-size: 20px;
+  color: #909090;
+}
+
+.ticket .status {
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 100px;
+  color: white;
+}
+
+.red {
+  background-color: #e63946;
+}
+
+.green {
+  background-color: #31d237;
+}
+
+.contianer__status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}

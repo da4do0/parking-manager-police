@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/header/header";
 import Segnalazioni from "./pages/segnalazioni/segnalazioni";
+import Parcheggi from "./pages/parcheggi/parcheggi";
 
 const router = createBrowserRouter([
   {
@@ -14,14 +15,14 @@ const router = createBrowserRouter([
       {
         path: "/segnalazioni",
         element: <Segnalazioni />,
-      },/* 
-      {
+      },
+      /* {
         path: "/zona",
         element: <Zona />,
       }, */
       {
-        path: "/segnalazioni",
-        element: <Segnalazioni />,
+        path: "/parcheggi",
+        element: <Parcheggi/>,
       },
     ],
   },

@@ -17,6 +17,7 @@ const CardSegnalazione = ({ Segnalazioni }) => {
               </div>
             </div>
 
+
             <div className="segnalazione__descrizione">
               <span>
                 {description ||
