@@ -23,13 +23,13 @@ const Filter = ({}) => {
             <div className="svg__euro">
               <span>€</span>
             </div>
-            <input type="text" name="multaMin" id="multaMin" />
+            <input type="number" name="multaMin" id="multaMin" />
           </div>
           <div className="multa__max">
             <div className="svg__euro">
               <span>€</span>
             </div>
-            <input type="text" name="multaMax" id="multaMax" />
+            <input type="number" name="multaMax" id="multaMax" />
           </div>
         </div>
       </div>

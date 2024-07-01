@@ -1,5 +1,4 @@
 aside{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +7,7 @@ aside{
 .filter{
     padding: 10px 20px;
     background-color: #FFFFFF;
-    display: inline-block;
+    width: 90%;
     border-radius: 10px;
 }
 
@@ -45,15 +44,34 @@ aside{
 
 
 .multa__max, .multa__min{
-    border: 1px solid red;
-    width: 25%;
+    position: relative;
+    width: 50%;
 }
 
 .multa__min >input, .multa__max> input{
     width: 100%;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    background-color: #EBEBEB;
+    border: none;
+    border-radius: 5px;
 }
 
 .svg__euro{
     position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+.data-ora__input{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    gap: 10px;
+}
+
+.data-ora__input > input{
+    background-color: #EBEBEB;
+    border: none;
+    padding: 5px 10px ;
 }
