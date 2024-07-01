@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchBar from "../../components/seach-bar/searchBar";
 import InfoBar from "../../components/info-bar/infoBar";
 import CardSegnalazione from "../../components/card-segnalazione/cardSegnalazione";
 import Filter from "../../components/filter/filter";
 import CardTicket from "../../components/card-status-ticket/cardTicket";
+import { useNavigate } from "react-router-dom";
+import {useLoginCk} from '../../hooks/login.hook';
 
 const Parcheggi = () => {
   const [searchValue, setsearchValue] = useState("");
@@ -11,10 +13,19 @@ const Parcheggi = () => {
   const [stato, stato_set] = useState();
   const [dataInizio, dataInizio_set] = useState();
   const [dataFine, dataFine_set] = useState();
-
+  const navigate = useNavigate();
+  const {matricola} = useLoginCk();
+  
   const queryMod = () =>{
-    
+
   }
+
+  useEffect(()=>{
+    console.log(matricola, 'matricola')
+    /* if(matricola === null){
+      navigate('/login');
+    } */
+  }, [, matricola]);
 
   return (
     <>

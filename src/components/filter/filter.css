@@ -1,98 +1,110 @@
-aside{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.filter{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 20px;
-    background-color: #FFFFFF;
-    width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.filter button{
-    padding: 10px 10px;
-    border: none;
-    background-color: #A8DADC;
-    border-radius: 5px;
-    cursor: pointer;
+.filter button {
+  padding: 10px 10px;
+  border: none;
+  background-color: #a8dadc;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.filter > span{
-    font-size: 24px;
-    font-weight: 600;
+.filter button:hover {
+  filter: brightness(93%);
+  transition: filter 0.3s;
 }
 
-.status > span, .multa>span, .data-ora>span{
-    font-size: 20px;
-    color: #909090;
+.filter > span {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.status, .multa, .data-ora{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.status > span,
+.multa > span,
+.data-ora > span {
+  font-size: 20px;
+  color: #909090;
 }
 
-.status-button__container, .multa-button__container{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+.status,
+.multa,
+.data-ora {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.status-button__container button{
-    border: none;
-    background-color: #EBEBEB;
-    font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    cursor: pointer;
-    opacity: 80%;
-    transition: color 0.5s;
+.status-button__container,
+.multa-button__container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-.status-button__container button:hover{
-    background-color: #dcdada;
-    opacity: 80%;
-    transition: 0.3s;
+.status-button__container button {
+  border: none;
+  background-color: #ebebeb;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 80%;
+  transition: color 0.5s;
 }
 
-.multa__max, .multa__min{
-    position: relative;
-    width: 50%;
+.status-button__container button:hover {
+  background-color: #dcdada;
+  opacity: 80%;
+  transition: 0.3s;
 }
 
-.multa__min >input, .multa__max> input{
-    width: 100%;
-    padding: 5px 15px;
-    background-color: #EBEBEB;
-    border: none;
-    border-radius: 5px;
+.multa__max,
+.multa__min {
+  position: relative;
+  width: 50%;
 }
 
-.svg__euro{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
+.multa__min > input,
+.multa__max > input {
+  width: 100%;
+  padding: 5px 15px;
+  background-color: #ebebeb;
+  border: none;
+  border-radius: 5px;
 }
 
-.data-ora__input{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    align-items: center;
-    gap: 10px;
-    justify-content: start;
+.svg__euro {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
 }
 
-.data-ora__input > input{
-    background-color: #EBEBEB;
-    border: none;
-    padding: 5px 10px ;
-    border-radius: 5px;
+.data-ora__input {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 10px;
+  justify-content: start;
+}
+
+.data-ora__input > input {
+  background-color: #ebebeb;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
 }

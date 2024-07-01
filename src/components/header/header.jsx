@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate} from "react-router-dom";
 import logoPula from "../../assets/logo.png";
 import userPula from "../../assets/Profilo-icon.png";
+import {useLoginCk} from '../../hooks/login.hook';
 import "./header.css";
 
 const linkStyle = ({ isActive }) => {
@@ -10,9 +11,16 @@ const linkStyle = ({ isActive }) => {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {updateMatricola} = useLoginCk();
+  const navigate = useNavigate();
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const logout = ()=>{
+    updateMatricola(null)
+    navigate('/login');
+  }
 
   return (
     <>
@@ -33,7 +41,7 @@ const Header = () => {
             <img src={userPula} alt="User Icon" />
             {isOpen && (
               <div className="dropdown-menu__header">
-                <button className="dropdown-item__header" onClick={() => alert('Esci')}>
+                <button className="dropdown-item__header" onClick={logout}>
                   Esci
                 </button>
               </div>
