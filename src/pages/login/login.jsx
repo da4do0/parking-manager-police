@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import logo from "../../assets/logo.png";
+import React, { useEffect, useState } from "react";
+import logo from "../../assets/logo2.png";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { createClient } from "@supabase/supabase-js";
@@ -13,7 +13,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const Login = () => {
   const [matricola, matricola_set] = useState("");
   const [pass, pass_set] = useState("");
-  const { updateMatricola } = useLoginCk();
+  const { updateMatricola, setMatricola } = useLoginCk();
   const navigate = useNavigate();
 
   const checkUser = async () => {
@@ -22,39 +22,11 @@ const Login = () => {
       .select("id")
       .eq("matricola", matricola)
       .eq("password", pass);
-    console.log(data);
-    console.error(error);
     if (data.length > 0) {
       updateMatricola(matricola);
       navigate("/segnalazioni");
     }
   };
-
-  /* return (
-    <div className="login-container">
-      <div className="container__logo">
-        <img src={logo} alt="login logo" className="login-logo" />
-      </div>
-      <div className="login-inputs">
-        <input
-          type="text"
-          placeholder="matricola"
-          onInput={(e) => matricola_set(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onInput={(e) => pass_set(e.target.value)}
-        />
-      </div>
-      <a href="#" className="forgot-password">
-        password dimenticata?
-      </a>
-      <button className="login-button" onClick={checkUser}>
-        Accedi
-      </button>
-    </div>
-  ); */
 
   return (
     <div className="login-container">

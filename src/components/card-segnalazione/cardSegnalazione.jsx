@@ -1,5 +1,4 @@
 import React from "react";
-import { FixedSizeList as List } from 'react-window';
 import "./cardSegnalazione.css";
 
 const CardSegnalazione = ({ Segnalazioni }) => {
@@ -15,7 +14,7 @@ const CardSegnalazione = ({ Segnalazioni }) => {
                 <span>ID</span>
                 {id}
               </div>
-              <div className="segnalazione__stato">
+              <div className={`${stato === "aperto" ? "green" : "red"} segnalazione__stato`}>
                 {stato}
               </div>
             </div>

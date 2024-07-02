@@ -20,13 +20,6 @@ const Parcheggi = () => {
 
   }
 
-  useEffect(()=>{
-    console.log(matricola, 'matricola')
-    /* if(matricola === null){
-      navigate('/login');
-    } */
-  }, [, matricola]);
-
   return (
     <>
       <main>
