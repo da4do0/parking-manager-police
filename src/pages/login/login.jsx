@@ -13,7 +13,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const Login = () => {
   const [matricola, matricola_set] = useState("");
   const [pass, pass_set] = useState("");
-  const { updateMatricola, setMatricola } = useLoginCk();
+  const { updateMatricola} = useLoginCk();
   const navigate = useNavigate();
 
   const checkUser = async () => {

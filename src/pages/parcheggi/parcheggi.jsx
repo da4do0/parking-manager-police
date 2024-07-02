@@ -7,6 +7,7 @@ import CardTicket from "../../components/card-status-ticket/cardTicket";
 import { useNavigate } from "react-router-dom";
 import {useLoginCk} from '../../hooks/login.hook';
 
+
 const Parcheggi = () => {
   const [searchValue, setsearchValue] = useState("");
   const [arrayTickets, arrayTickets_set] = useState([]);
@@ -15,10 +16,12 @@ const Parcheggi = () => {
   const [dataFine, dataFine_set] = useState();
   const navigate = useNavigate();
   const {matricola} = useLoginCk();
-  
-  const queryMod = () =>{
 
-  }
+  useEffect(()=>{
+    if(matricola===''){
+      navigate('/login');
+    }
+  }, []);
 
   return (
     <>

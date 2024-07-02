@@ -10,21 +10,9 @@ import Header from "./components/header/header";
 import Segnalazioni from "./pages/segnalazioni/segnalazioni";
 import Parcheggi from "./pages/parcheggi/parcheggi";
 import Login from "./pages/login/login"; //
-import {
-  LoginChecker,
-  useLoginChecker,
-  useLoginCk,
-  LoginContext,
-} from "./hooks/login.hook";
 import ParkingManager from "./pages/parking-manager-police/parking-manager-police";
+import {LoginChecker} from './hooks/login.hook';
 
-const ProtectedRoute = ({ children }) => {
-  const { matricola } = useLoginCk();
-  if (matricola) {
-    return <Navigate to="/login" />;
-  }
-  return children;
-};
 
 const router = createBrowserRouter([
   {
@@ -33,35 +21,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: (
-          <ProtectedRoute>
-            <Segnalazioni />
-          </ProtectedRoute>
-        ),
+        element:
+            <Segnalazioni />,
       },
       {
         path: "/segnalazioni",
-        element: (
-          <ProtectedRoute>
-            <Segnalazioni />
-          </ProtectedRoute>
-        ),
+        element: 
+            <Segnalazioni />,
       },
       {
         path: "/parcheggi",
-        element: (
-          <ProtectedRoute>
-            <Parcheggi />
-          </ProtectedRoute>
-        ),
+        element:
+            <Parcheggi />,
       },
       {
         path: "/login",
-        element: (
-          <LoginChecker>
-            <Login />
-          </LoginChecker>
-        ),
+        element:
+            <Login />,
       },
       {
         path: "/parking-manager-police",
@@ -75,7 +51,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <LoginChecker>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </LoginChecker>
   </React.StrictMode>
 );
