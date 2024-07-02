@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/parking-manager-police/static/css/main.926da879.css",
-    "main.js": "/parking-manager-police/static/js/main.04aa0665.js",
+    "main.css": "/parking-manager-police/static/css/main.81b81bfe.css",
+    "main.js": "/parking-manager-police/static/js/main.d0be6fde.js",
+    "static/js/952.eeb33b1b.chunk.js": "/parking-manager-police/static/js/952.eeb33b1b.chunk.js",
     "index.html": "/parking-manager-police/index.html",
-    "main.926da879.css.map": "/parking-manager-police/static/css/main.926da879.css.map",
-    "main.04aa0665.js.map": "/parking-manager-police/static/js/main.04aa0665.js.map"
+    "main.81b81bfe.css.map": "/parking-manager-police/static/css/main.81b81bfe.css.map",
+    "main.d0be6fde.js.map": "/parking-manager-police/static/js/main.d0be6fde.js.map",
+    "952.eeb33b1b.chunk.js.map": "/parking-manager-police/static/js/952.eeb33b1b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.926da879.css",
-    "static/js/main.04aa0665.js"
+    "static/css/main.81b81bfe.css",
+    "static/js/main.d0be6fde.js"
   ]
 }
