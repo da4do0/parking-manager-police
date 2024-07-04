@@ -1,7 +1,8 @@
 import React from "react";
 import "./filter.css";
 
-const Filter = ({ multaMin, multaMax, stato, dataInizio, dataFine }) => {
+const Filter = ({statovalue, multaMin, multaMax, stato, dataInizio, dataFine , searchDataStatus}) => {
+  
   return (
     <div className="filter">
       <span>Filtri</span>
@@ -9,11 +10,14 @@ const Filter = ({ multaMin, multaMax, stato, dataInizio, dataFine }) => {
         <div className="status">
           <span>Stato</span>
           <div className="status-button__container">
-            <button onClick={()=>stato("aperto")}>
+            <button className={`${statovalue==="aperto" ? "active-btn":""}`} onClick={()=>stato("aperto")}>
               <span>Aperte</span>
             </button>
-            <button onClick={()=>stato("chiuso")}>
+            <button className={`${statovalue==="chiuso" ? "active-btn":""}`} onClick={()=>stato("chiuso")}>
               <span>Chiuse</span>
+            </button>
+            <button  onClick={()=>stato(null)}>
+              <span>Reset</span>
             </button>
           </div>
         </div>
@@ -55,7 +59,7 @@ const Filter = ({ multaMin, multaMax, stato, dataInizio, dataFine }) => {
       ) : (
         ""
       )}
-      <button>Applica</button>
+      <button onClick={searchDataStatus}>Applica</button>
     </div>
   );
 };

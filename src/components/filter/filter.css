@@ -4,6 +4,10 @@ aside {
   align-items: flex-start;
 }
 
+.status-button__container .active-btn{
+  background-color: #A8DADC;
+}
+
 .filter {
   display: flex;
   flex-direction: column;
