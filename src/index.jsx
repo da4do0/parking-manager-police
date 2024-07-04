@@ -5,14 +5,14 @@ import {
   createBrowserRouter,
   RouterProvider,
   Navigate,
+  HashRouter,
 } from "react-router-dom";
 import Header from "./components/header/header";
 import Segnalazioni from "./pages/segnalazioni/segnalazioni";
 import Parcheggi from "./pages/parcheggi/parcheggi";
 import Login from "./pages/login/login"; //
 import ParkingManager from "./pages/parking-manager-police/parking-manager-police";
-import {LoginChecker} from './hooks/login.hook';
-
+import { LoginChecker } from "./hooks/login.hook";
 
 const router = createBrowserRouter([
   {
@@ -21,23 +21,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element:
-            <Segnalazioni />,
+        element: <Segnalazioni />,
       },
       {
         path: "/segnalazioni",
-        element: 
-            <Segnalazioni />,
+        element: <Segnalazioni />,
       },
       {
         path: "/parcheggi",
-        element:
-            <Parcheggi />,
+        element: <Parcheggi />,
       },
       {
         path: "/login",
-        element:
-            <Login />,
+        element: <Login />,
       },
       {
         path: "/parking-manager-police",
@@ -50,8 +46,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <LoginChecker>
-      <RouterProvider router={router} />
-    </LoginChecker>
+    <HashRouter basename="/parking-manager-police/">
+      <LoginChecker>
+        <RouterProvider router={router} />
+      </LoginChecker>
+    </HashRouter>
   </React.StrictMode>
 );
